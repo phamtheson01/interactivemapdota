@@ -1,0 +1,52 @@
+#tool-btn-container {
+    position: absolute;
+    top: 0px;
+    left: 50px;
+    height: 50px;
+    width: 250px;
+    z-index: 10;
+    background-color: rgba(175, 175, 175, 0.4);
+    
+    @media #{$vertical-toolbar} {
+        width: 50px;
+        top: 50px;
+        left: 0;
+        height: 250px;
+    }
+}
+.btn-tool {
+    display: inline-block;
+    position: relative;
+    left: 0;
+
+    @media #{$vertical-toolbar} {
+        display: block;
+    }
+}
+
+#btn-tree {
+    background-image: url('img/dota_cursor.png');
+    &[trees-enabled="yes"] {
+        background-image: url('img/btn-quelling_blade.png');
+    }
+}
+#btn-ward[ward-type="observer"] {
+    background-image: url('img/ward_dispenser_observer.png');
+}
+#btn-ward[ward-type="sentry"] {
+    background-image: url('img/ward_dispenser_sentry.png');
+}
+#btn-measure {
+    position: relative;
+}
+.zoom-label  {
+    width: 50px;
+    line-height: 50px;
+    font-size: 50px;
+    left: 0;
+    position: absolute;
+}
+#btn-zoom-in:hover,
+#btn-zoom-out:hover  {
+    font-size: 32px;
+}
